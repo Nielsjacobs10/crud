@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background-color: #ddd;
+  color: #444;
+  font-family: "Raleway", sans-serif;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.slider {
+  background-color: #444;
+  color: #fff;
+  min-height: 450px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(https://s3.amazonaws.com/cgimg/t/g57/565157/1416518_orig.jpg);
+  background-image: url(https://cdn.dribbble.com/users/63407/screenshots/4922485/dribbble_roadtrip_winding_road_1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.MuiToolbar-root-38{
+  background: #051249;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.caption p {
+  margin-top: 0;
+}
+h2{
+ font-family: 'Numans', sans-serif;
+ font-size: 3rem;
+}
