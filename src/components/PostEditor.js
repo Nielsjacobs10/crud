@@ -45,6 +45,14 @@ const PostEditor = ({ classes, post, onSave, history }) => (
               <Field name="title">
                 {({ input }) => <TextField label="Title" autoFocus {...input} />}
               </Field>
+              <Field name="land">
+                {({ input }) => <TextField label="land"  multiline
+                    rows={2} autoFocus {...input} />}
+              </Field>
+              <Field name="img">
+                {({ input }) => <TextField label="img"  multiline
+                    rows={1} autoFocus {...input} />}
+              </Field>
               <Field name="body">
                 {({ input }) => (
                   <TextField
@@ -57,9 +65,7 @@ const PostEditor = ({ classes, post, onSave, history }) => (
                 )}
 
               </Field>
-              <Field name="Land">
-                {({ input }) => <TextField label="Land" autoFocus {...input} />}
-              </Field>
+             
             </CardContent>
             <CardActions>
               <Button size="small" color="primary" type="submit">Save</Button>

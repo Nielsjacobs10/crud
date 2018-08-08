@@ -36,14 +36,18 @@ const database = new Sequelize({
 
 const Post = database.define('posts', {
   title: Sequelize.STRING,
+  land: Sequelize.STRING,
   body: Sequelize.TEXT,
+  img: Sequelize.TEXT,
+
+
 });
 
 epilogue.initialize({ app, sequelize: database });
 
 epilogue.resource({
   model: Post,
-  endpoints: ['/posts', '/posts/:id'],
+  endpoints: ['/posts', '/posts/:id', '/posts/details/:id'],
 });
 
 const port = process.env.SERVER_PORT || 3001;

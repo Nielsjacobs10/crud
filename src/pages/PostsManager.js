@@ -12,6 +12,7 @@ import {
   ListItemText,
   ListItemSecondaryAction,
 } from '@material-ui/core';
+
 import { Delete as DeleteIcon, Add as AddIcon } from '@material-ui/icons';
 import moment from 'moment';
 import { find, orderBy } from 'lodash';
@@ -45,7 +46,7 @@ class PostsManager extends Component {
     this.getPosts();
   }
 
-  async fetch(method, endpoint, body) {
+  async fetch(method, endpoint, body, land) {
     try {
       const response = await fetch(`${API}${endpoint}`, {
         method,

@@ -8,6 +8,7 @@ import {
 import './App.css';
 import AppHeader from './components/AppHeader';
 import Banner from './components/Banner';
+import TravelCards from './components/TravelCards';
 
 import Home from './pages/Home';
 import PostsManager from './pages/PostsManager';
@@ -28,6 +29,7 @@ const App = ({ classes }) => (
     <CssBaseline />
     <AppHeader />
     <Route exact path="/" component={Banner} />
+    <Route exact path="/" component={TravelCards} />
 
     <main className={classes.main}>
     <Route exact path="/" component={Home} />    
