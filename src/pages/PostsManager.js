@@ -46,7 +46,7 @@ class PostsManager extends Component {
     this.getPosts();
   }
 
-  async fetch(method, endpoint, body, land) {
+  async fetch(method, endpoint, body,) {
     try {
       const response = await fetch(`${API}${endpoint}`, {
         method,

@@ -30,7 +30,12 @@ a, a:hover, a:focus {
   background-size: cover;
   background-position: center center;
 }
+p {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+font-weight: bolder;
 
+}
 .caption {
   background-color: rgba(0, 0, 0, 0.35);
   position: absolute;

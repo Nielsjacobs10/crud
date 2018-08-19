@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 import { SecureRoute, ImplicitCallback } from '@okta/okta-react';
+// import Country from './components/countries'
 import {
   CssBaseline,
   withStyles,
@@ -9,6 +10,7 @@ import './App.css';
 import AppHeader from './components/AppHeader';
 import Banner from './components/Banner';
 import TravelCards from './components/TravelCards';
+import PostDetail from './pages/detail';
 
 import Home from './pages/Home';
 import PostsManager from './pages/PostsManager';
@@ -29,13 +31,17 @@ const App = ({ classes }) => (
     <CssBaseline />
     <AppHeader />
     <Route exact path="/" component={Banner} />
-    <Route exact path="/" component={TravelCards} />
 
     <main className={classes.main}>
-    <Route exact path="/" component={Home} />    
+    <Route exact path="/" component={Home} />
+    <Route exact path="/" component={TravelCards} />
+    <Route exact path="/details/posts/:id" component={PostDetail}/>    
+    
       <SecureRoute exact path="/posts" component={PostsManager} />
       <Route path="/implicit/callback" component={ImplicitCallback} />
       <Route path="/categories" component={Categories} />
+      {/* <Route path="/countries" component={Country} /> */}
+
     </main>
     <BottomNavigation />
 

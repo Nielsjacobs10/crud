@@ -10,10 +10,12 @@ import {
   };
 class Categories extends Component {
     render() {
-        return <h1>
-            <Typography variant="display1">Categories:
+        return (
+            <Typography variant="display1">Categories
              </Typography>
-        </h1>;
+
+            
+        );
       }
     }
 export default withStyles(styles)(Categories);

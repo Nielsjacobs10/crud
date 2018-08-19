@@ -53,13 +53,14 @@ a, a:hover, a:focus {
   overflow: hidden;
   position: relative;
   background-image: url(https://s3.amazonaws.com/cgimg/t/g57/565157/1416518_orig.jpg);
-  background-image: url(https://cdn.dribbble.com/users/63407/screenshots/4922485/dribbble_roadtrip_winding_road_1x.png);
+  background-image: url(https://unsplash.com/photos/ucYWe5mzTMU.png);
+  /* https://dribbble.com/shots/3966741-Green-Material-Design-Backgrounds */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .MuiToolbar-root-38{
-  background: #051249;
+  background: #22de87;
 }
 
 .caption {
@@ -80,4 +81,31 @@ a, a:hover, a:focus {
 h2{
  font-family: 'Numans', sans-serif;
  font-size: 3rem;
+}
+.title{
+  padding-top: 50px;
+  padding-bottom: 25px;
+  text-align: center;
+  display: block;
+  font-weight: 800;
+  font-size:2em;
+}
+.left{
+width: 50%;
+margin: 20px;
+padding: 10px 10px;
+}
+.justify{
+  text-align: justify;
+}
+.right{
+  position: absolute;
+  right: 0;
+}
+.center{
+  margin-left: 20%;
+  padding: 10px 10px;
+  align-items: center;
+  text-align: center;
+  margin-right: 20%;
 }

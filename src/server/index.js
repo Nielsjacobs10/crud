@@ -17,17 +17,17 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use(async (req, res, next) => {
-  try {
-    if (!req.headers.authorization) throw new Error('Authorization header is required');
+// app.use(async (req, res, next) => {
+//   try {
+//     if (!req.headers.authorization) throw new Error('Authorization header is required');
 
-    const accessToken = req.headers.authorization.trim().split(' ')[1];
-    await oktaJwtVerifier.verifyAccessToken(accessToken);
-    next();
-  } catch (error) {
-    next(error.message);
-  }
-});
+//     const accessToken = req.headers.authorization.trim().split(' ')[1];
+//     await oktaJwtVerifier.verifyAccessToken(accessToken);
+//     next();
+//   } catch (error) {
+//     next(error.message);
+//   }
+// });
 
 const database = new Sequelize({
   dialect: 'sqlite',
@@ -47,7 +47,7 @@ epilogue.initialize({ app, sequelize: database });
 
 epilogue.resource({
   model: Post,
-  endpoints: ['/posts', '/posts/:id', '/posts/details/:id'],
+  endpoints: ['/posts', '/posts/:id','/details/posts/:id'],
 });
 
 const port = process.env.SERVER_PORT || 3001;
